@@ -10,9 +10,9 @@ def test_first_digit():
 
 def test_last_digit():
     assert t.last_digit("1abc2") == "2"
-    assert t.first_digit("abc") == ""
-    assert t.first_digit("a1bc") == "1"
-    assert t.first_digit("abc2") == "2"
+    assert t.last_digit("abc") == ""
+    assert t.last_digit("a1bc") == "1"
+    assert t.last_digit("abc2") == "2"
 
 
 def test_first_and_last_digit_as_number():
@@ -29,11 +29,7 @@ def test_read_file():
 
 
 def test_lines_to_numbers():
-    assert t.lines_to_numbers(["1abc2"]) == [12]
-
-
-def test_sum_numbers():
-    assert t.sum_numbers([11, 12]) == 23
+    assert t.lines_to_numbers(["1abc2", "jlsa332asdfa3"]) == [12, 33]
 
 
 def test_main():

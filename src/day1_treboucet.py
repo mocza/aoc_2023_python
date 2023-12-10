@@ -4,18 +4,12 @@ import sys
 
 def first_digit(string):
     match = re.search(r"^[^\d]*(\d)", string)
-    if match:
-        return match.group(1)
-    else:
-        return ""
+    return match.group(1) if match else ""
 
 
 def last_digit(string):
     match = re.search(r"(\d)[^\d]*$", string)
-    if match:
-        return match.group(1)
-    else:
-        return ""
+    return match.group(1) if match else ""
 
 
 def first_and_last_digit_as_number(string):
